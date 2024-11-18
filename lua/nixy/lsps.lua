@@ -29,7 +29,7 @@ local utils = {
 }
 
 local lspconfig = require"lspconfig"
-local icons = require"nixify.icons"
+local icons = require"nixy.icons"
 
 local servers = {
 	"clangd",
