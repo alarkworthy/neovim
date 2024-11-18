@@ -138,6 +138,7 @@
 		cmp-path
 		cmp-cmdline
 		cmp_luasnip
+		luasnip
 		friendly-snippets
 		harpoon
 		presence-nvim
