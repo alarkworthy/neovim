@@ -89,7 +89,9 @@ for _, server in pairs(servers) do
   --if require_ok then
   --  opts = vim.tbl_deep_extend("force", settings, opts)
   --end
-
+	if server == "lua_ls" then
+    require("lazydev").setup({})
+  end
 
   --if server == "zls" then
   --  vim.cmd("let g:zig_fmt_autosave = 0")

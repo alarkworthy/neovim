@@ -31,10 +31,27 @@
         "type": "github"
       }
     },
+    "plugins-spaceduck": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1645472969,
+        "narHash": "sha256-lE8y9BA2a4y0B6O3+NyOS7numoltmzhArgwTAner2fE=",
+        "owner": "pineapplegiant",
+        "repo": "spaceduck",
+        "rev": "350491f19343b24fa85809242089caa02d4dadce",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pineapplegiant",
+        "repo": "spaceduck",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixCats": "nixCats",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "plugins-spaceduck": "plugins-spaceduck"
       }
     }
   },

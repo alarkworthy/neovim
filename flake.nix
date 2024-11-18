@@ -23,7 +23,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
-
+		plugins-spaceduck = {
+			url = "github:pineapplegiant/spaceduck";
+			flake = false;
+		};
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     # };
@@ -110,21 +113,20 @@
 		texlab
 		nixd
 		nix-doc
-	
+
 		vscode-langservers-extracted
         ];
-	
+
       };
 
       # This is for plugins that will load at startup without using packadd:
       startupPlugins = {
-        gitPlugins = with pkgs.neovimPlugins; [ ];
+        gitPlugins = with pkgs.neovimPlugins; [spaceduck];
         general = with pkgs.vimPlugins; [
 		mini-nvim
-			
+
 		nvim-lspconfig
 		lazydev-nvim
-		tokyonight-nvim	
 		nvim-treesitter.withAllGrammars
 
 		telescope-nvim
@@ -142,7 +144,7 @@
 		friendly-snippets
 		harpoon
 		presence-nvim
-		
+
 	];
       };
 
