@@ -1,0 +1,12 @@
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.ignorecase = true
+vim.o.undofile = true
+-- vim.o.cursoline = true
+vim.o.wrap = true
+vim.o.scrolloff = 5
+vim.o.list = true
+vim.o.splitbelow = true
+vim.o.splitright = true
+vim.o.signcolumn="yes"
+vim.o.title = true

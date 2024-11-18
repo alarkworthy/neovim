@@ -97,20 +97,59 @@
       # this includes LSPs
       lspsAndRuntimeDeps = {
         general = with pkgs; [
+		ripgrep
+		fd
+		universal-ctags
+		cmake-language-server
+		autotools-language-server
+		clang-tools
+		lua-language-server
+		bash-language-server
+		rust-analyzer
+		marksman
+		texlab
+		nixd
+		nix-doc
+	
+		vscode-langservers-extracted
         ];
+	
       };
 
       # This is for plugins that will load at startup without using packadd:
       startupPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [ ];
-        general = with pkgs.vimPlugins; [ ];
+        general = with pkgs.vimPlugins; [
+		mini-nvim
+			
+		nvim-lspconfig
+		lazydev-nvim
+		tokyonight-nvim	
+		nvim-treesitter.withAllGrammars
+
+		telescope-nvim
+
+		nvim-cmp
+
+		cmp-nvim-lsp
+		cmp-nvim-lua
+		cmp-buffer
+		cmp-emoji
+		cmp-path
+		cmp-cmdline
+		cmp_luasnip
+		friendly-snippets
+		harpoon
+		presence-nvim
+		
+	];
       };
 
       # not loaded automatically at startup.
       # use with packadd and an autocommand in config to achieve lazy loading
       optionalPlugins = {
         gitPlugins = with pkgs.neovimPlugins; [ ];
-        general = with pkgs.vimPlugins; [ ];
+        general = with pkgs.vimPlugins; [ vimtex ];
       };
 
       # shared libraries to be added to LD_LIBRARY_PATH
