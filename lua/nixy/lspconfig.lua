@@ -42,6 +42,8 @@ local servers = {
 	"texlab",
 	"nixd",
 	"cssls",
+	"pyright",
+	--"ruff",
 }
 
 local default_diagnostic_config = {
@@ -93,10 +95,9 @@ for _, server in pairs(servers) do
     require("lazydev").setup({})
   end
 
-  --if server == "zls" then
+	--if server == "zls" then
   --  vim.cmd("let g:zig_fmt_autosave = 0")
   --end
-
   lspconfig[server].setup(opts)
 end
 

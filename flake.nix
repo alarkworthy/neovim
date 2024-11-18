@@ -113,9 +113,12 @@
 		texlab
 		nixd
 		nix-doc
-
+		biber
+		xdotool
 		vscode-langservers-extracted
-        ];
+		pyright
+		ruff
+				];
 
       };
 
