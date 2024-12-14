@@ -12,7 +12,6 @@ end
 local utils = {
   on_attach = function (client, bufnr)
     lsp_keymaps(bufnr)
-
     if client.supports_method("textDocument/inlayHint") then
       vim.lsp.inlay_hint.enable(true)
     end
@@ -86,7 +85,9 @@ for _, server in pairs(servers) do
     on_attach = utils.on_attach,
     capabilities = utils.common_capabilities(),
   }
-
+	--if server =="ruff" then
+	--
+	--end
   --local require_ok, settings = pcall(require, "benix.lspsettings." .. server)
   --if require_ok then
   --  opts = vim.tbl_deep_extend("force", settings, opts)
@@ -94,7 +95,6 @@ for _, server in pairs(servers) do
 	if server == "lua_ls" then
     require("lazydev").setup({})
   end
-
 	--if server == "zls" then
   --  vim.cmd("let g:zig_fmt_autosave = 0")
   --end
