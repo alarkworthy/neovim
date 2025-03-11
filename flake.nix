@@ -118,6 +118,7 @@
 		vscode-langservers-extracted
 		pyright
 		ruff
+		pstree
 				];
 
       };
