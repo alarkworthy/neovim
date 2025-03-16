@@ -34,6 +34,7 @@ local servers = {
 	"clangd",
 	"cmake",
 	"autotools_ls",
+	"asm_lsp",
 	"lua_ls",
 	"bashls",
 	"rust_analyzer",

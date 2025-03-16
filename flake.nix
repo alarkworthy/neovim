@@ -119,6 +119,7 @@
 		pyright
 		ruff
 		pstree
+		asm-lsp
 				];
 
       };
